@@ -20,8 +20,15 @@ namespace DragonsLair_1
 
         public bool IsMatchesFinished()
         {
-         
-            return false;
+            for (int i = 0; i < matches.Count; i++)
+            {
+                
+                if (matches[i].winner == null)
+                {
+                    return false;
+                }
+            }
+            return true;
         }
 
         public List<Team> GetWinningTeams()
