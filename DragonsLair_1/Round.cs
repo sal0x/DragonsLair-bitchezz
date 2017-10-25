@@ -20,19 +20,40 @@ namespace DragonsLair_1
 
         public bool IsMatchesFinished()
         {
-         if { }
+         
             return false;
         }
 
         public List<Team> GetWinningTeams()
         {
-            return null;
+            List<Team> Result = new List<Team>(); // Kører for antal matches i liste
+            for (int i = 0; i < matches.Count; i++)
+            {
+                Result.Add(matches[i].winner);
+            }
+            
+            return Result;
+
+
         }
 
         public List<Team> GetLosingTeams()
         {
-            // TODO: Implement this method
-            return null;
+            List<Team> Result = new List<Team>(); // Kører for antal matches i liste
+            for (int i = 0; i < matches.Count; i++)
+            {
+                if(matches[i].winner == matches[i].firstOpponent)
+                {
+                    Result.Add(matches[i].secondOpponent);
+                }
+                else
+                {
+                    Result.Add(matches[i].firstOpponent);
+                }
+                    
+            }
+
+            return Result;
         }
     }
 }
