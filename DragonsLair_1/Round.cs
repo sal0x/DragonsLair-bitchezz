@@ -23,23 +23,22 @@ namespace DragonsLair_1
             for (int i = 0; i < matches.Count; i++)
             {
                 
-                if (matches[i].winner == null)
+                if (matches[i].Winner == null)
                 {
                     return false;
                 }
             }
             return true;
         }
-
+        
         public List<Team> GetWinningTeams()
         {
-            List<Team> Result = new List<Team>(); // Kører for antal matches i liste
+            List<Team> WinningTeams = new List<Team>(); // Kører for antal matches i liste
             for (int i = 0; i < matches.Count; i++)
             {
-                Result.Add(matches[i].winner);
+                WinningTeams.Add(matches[i].Winner);
             }
-            
-            return Result;
+            return WinningTeams;
 
 
         }
@@ -49,18 +48,32 @@ namespace DragonsLair_1
             List<Team> Result = new List<Team>(); // Kører for antal matches i liste
             for (int i = 0; i < matches.Count; i++)
             {
-                if(matches[i].winner == matches[i].firstOpponent)
+                if(matches[i].Winner == matches[i].FirstOpponent)
                 {
-                    Result.Add(matches[i].secondOpponent);
+                    Result.Add(matches[i].SecondOpponent);
                 }
                 else
                 {
-                    Result.Add(matches[i].firstOpponent);
+                    Result.Add(matches[i].FirstOpponent);
                 }
                     
             }
 
             return Result;
         }
+        //public void IsRoundFinished()
+        //{
+        //    if (IsMatchesFinished() == true);
+        //    {
+        //        int numberOfRounds = t.GetNumberOfRounds();
+        //        for (int round = 0; round < numberOfRounds - 1; round++)
+        //        {
+        //            Round currentRound = currentTournament.GetRound(round);
+        //        }
+            
+        //        if (currentRound.IsMatchesFinished() == false)
+        //            matchesFinished = false;
+        //    }
+        //}
     }
 }

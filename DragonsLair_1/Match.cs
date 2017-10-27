@@ -2,8 +2,8 @@
 {
     public class Match
     {
-        public Team firstOpponent { get; set; }
-        public Team secondOpponent { get; set; }
-        public Team winner { get; set; } = null;
+        public Team FirstOpponent { get; set; }
+        public Team SecondOpponent { get; set; }
+        public Team Winner { get; set; } = null;
     }
 }
