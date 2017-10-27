@@ -49,7 +49,7 @@ namespace DragonsLair_1
             else
             {
                  Round lastRound = t.GetRound(numberOfRound - 1);
-                bool isRoundFinished = lastRound.IsMatchesFinished();
+                bool isRoundFinished = lastRound.IsRoundFinished();
 
                 if (isRoundFinished == true)
                 {
@@ -67,7 +67,12 @@ namespace DragonsLair_1
                         }
                         RandomList.OrderByDescending(pair => pair.Value).ToDictionary(pair => pair.Key,pair =>pair.Value);
 
-                       
+                        Round newRound = new Round();
+                        if (team.Count %2 == 1)
+                        {
+                            int oldFreeRider = newRound.GetFreeRider();
+                            
+                        }
 
                     }
 

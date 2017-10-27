@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 
 namespace DragonsLair_1
 {
@@ -18,7 +19,7 @@ namespace DragonsLair_1
             return null;
         }
 
-        public bool IsMatchesFinished()
+        public bool IsRoundFinished()
         {
             for (int i = 0; i < matches.Count; i++)
             {
@@ -61,19 +62,10 @@ namespace DragonsLair_1
 
             return Result;
         }
-        //public void IsRoundFinished()
-        //{
-        //    if (IsMatchesFinished() == true);
-        //    {
-        //        int numberOfRounds = t.GetNumberOfRounds();
-        //        for (int round = 0; round < numberOfRounds - 1; round++)
-        //        {
-        //            Round currentRound = currentTournament.GetRound(round);
-        //        }
-            
-        //        if (currentRound.IsMatchesFinished() == false)
-        //            matchesFinished = false;
-        //    }
-        //}
+
+        public int GetFreeRider()
+        {
+            return 
+        }
     }
 }
