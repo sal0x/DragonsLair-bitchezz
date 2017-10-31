@@ -44,7 +44,7 @@ namespace DragonsLair_1
 
         }
 
-        public List<Team> GetLosingTeams()
+        public List<Team> GetLosingTeams() //Fjern/Rediger eller flyt
         {
             List<Team> Result = new List<Team>(); // Kører for antal matches i liste
             for (int i = 0; i < matches.Count; i++)
@@ -65,7 +65,7 @@ namespace DragonsLair_1
 
         public int GetFreeRider()
         {
-            return 
+            return 0;
         }
     }
 }

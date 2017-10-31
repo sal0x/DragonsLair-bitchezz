@@ -5,8 +5,8 @@ namespace DragonsLair_1
     public class Tournament
     {
         public string name { get; set; }
-        public Team teams { get; set; }
-        public Round rounds { get; set; }
+        private Team teams { get; set; }
+        private Round rounds { get; set; }
         public int score { get; set; }
 
         public Tournament(string tournamentName)
